@@ -4,6 +4,16 @@
 
 #include "Edge.h"
 
+/**
+ * Edge Constructor
+ *
+ * @param from
+ * @param to
+ * @param distance
+ * @param travel_time
+ * @param coins
+ * @param trolls
+ */
 Edge::Edge(Node from, Node to, int distance, int travel_time, int coins, int trolls) {
     this->from = from;
     this->to = to;
@@ -13,6 +23,11 @@ Edge::Edge(Node from, Node to, int distance, int travel_time, int coins, int tro
     this->trolls = trolls;
 }
 
+/**
+ * Return string object (json format) for debugging
+ *
+ * @return
+ */
 std::string Edge::to_string() {
     std::string s =   "Edge {\n  from: " + from.to_string()
                     + "\n  to: " + to.to_string()

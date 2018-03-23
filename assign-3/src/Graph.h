@@ -1,6 +1,11 @@
 //
 // Created by Zachary Aries on 2018-03-20.
 //
+/**
+ * Graph object
+ * Create a graph of 26 lists of edges (their adjacency list), one for each letter of the alphabet.
+ * The index of each node will be 0 - 25. A being 0, Z being 25
+ */
 
 #ifndef ASSIGN_3_GRAPH_H
 #define ASSIGN_3_GRAPH_H

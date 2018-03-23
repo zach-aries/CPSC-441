@@ -15,10 +15,9 @@ using namespace std;
 
 class PrintHelper {
 public:
-    static void print_header(string alg_name, string dest);
-    static void print_row(Graph& G, Node &source, Node &destination, vector<Edge> &path,
-                          string name);
-    static void print_footer();
+    static void print_header(string alg_name, string dest, string dest_home);
+    static tuple<int,int,int,int,int> print_row(Graph& G, Node &source, Node &destination, vector<Edge> &path, string name);
+    static void print_footer(tuple<float,float,float,float,float> avg_stats);
 };
 
 

@@ -45,29 +45,35 @@ Graph FileParser::parse_ntw_topology(string file_path) {
     return graph;
 }
 
+/**
+ * Iteraties through home file and places names/homes in a list of <string,Node> pairs
+ *
+ * @param file_path
+ * @param list - passed as reference so can be used from calling function
+ */
 void FileParser::parse_homes(string file_path, vector<pair<string, Node> > &list) {
-    string line;
-    ifstream input_file(file_path);
+    string line; // container for each line of file
+    ifstream input_file(file_path); // file reader
 
     if (input_file.is_open()) {
-        while (getline(input_file, line)) {
-            string word;
-            string word_arr[2];
+        while (getline(input_file, line)) { // while next line exists
+            string word; // word container
+            string word_arr[2]; // array of size 2 to hold name and destination
 
-            int i = 0;
-            stringstream ssin(line);
-            while (ssin.good() && i < 2){
-                ssin >> word_arr[i];
-                ++i;
+            int i = 0; // counter for array index access
+            stringstream ssin(line); // stream input for iterating through line
+            while (ssin.good() && i < 2){ // while stream is gtg and index isn't out of bound for array
+                ssin >> word_arr[i]; // transfer from stream to array
+                ++i; // increment index
             }
 
-            string name = word_arr[0];
-            Node n(word_arr[1][0]);
+            string name = word_arr[0]; // get name of Hobit
+            Node n(word_arr[1][0]); // get hobit home
 
-            list.emplace_back(make_pair(name, n));
+            list.emplace_back(make_pair(name, n)); // push to list
         }
 
-        input_file.close();
+        input_file.close(); // close file
     } else {
         cout << "Unable to open file.";
     }

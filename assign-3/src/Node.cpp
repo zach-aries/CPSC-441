@@ -12,6 +12,12 @@ Node::Node(const char name) {
     this->name = name;
 }
 
+/**
+ * returns the node's string representation
+ * A-Z
+ *
+ * @return
+ */
 std::string Node::to_string() {
     std::stringstream ss;
     std::string s;
@@ -22,10 +28,24 @@ std::string Node::to_string() {
     return s;
 }
 
+/**
+ * Character Name (A-Z)
+ *
+ * @return
+ */
 char Node::get_name() {
     return  this->name;
 }
 
+/**
+ * Index representation
+ * A = 0
+ * B = 1
+ * ...
+ * Z = 25
+ *
+ * @return int
+ */
 int Node::get_index() {
     if (name)
         return name - 65;

@@ -2,6 +2,12 @@
 // Created by Zachary Aries on 2018-03-21.
 //
 
+/**
+ * A node is just a character representation of a vertex.
+ * For our purpose each node has a predefined index 0-25, A being 0 and Z being 25
+ * Nodes can only be A-Z
+ */
+
 #ifndef ASSIGN_3_NODE_H
 #define ASSIGN_3_NODE_H
 
