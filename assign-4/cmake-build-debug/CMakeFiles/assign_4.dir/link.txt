@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/assign_4.dir/main.cpp.o CMakeFiles/assign_4.dir/src/binary_tree.cpp.o CMakeFiles/assign_4.dir/src/tree_processor.cpp.o  -o assign_4 
